@@ -7,6 +7,7 @@ BLUE=$(tput setaf 4);
 MAGENTA=$(tput setaf 5);
 CYAN=$(tput setaf 6);
 
+
 branch_color () {
     if git rev-parse --git-dir >/dev/null 2>&1; then
         color=""
