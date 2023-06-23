@@ -25,26 +25,55 @@ parse_git_branch() {
 
 PS1="\[\$YELLOW\]- \W\[\$(branch_color)\]\$(parse_git_branch)\[\$YELLOW\] $ \[\$NORMAL\]"
 
-# START GIT SECTION
-# stash
+# START GIT
 gstash(){ git stash; }
 gstashp(){ git stash pop; }
 gstashd(){ git stash drop "$1"; }
 gstashl(){ git stash list; }
-# misc
 greset(){ git reset --hard; }
 gchk(){ git checkout "$1"; }
-gs(){ git status; }
-# add, commit and push code
+gstatus(){ git status; }
+gdiff(){ git diff --color=auto; }
 gpull(){ git pull; }
 gadd(){ git add -A; echo "all changes added to the staging area."; }
 gcommit(){ git commit -m "$1"; }
 gcommitp(){ git commit -m "$1"; git push; }
 gacp(){ git commit -am "$1"; git push; }
-# branches
 gbranch(){ git branch; }
 gbranchn(){ git checkout -b "$1"; }
-# log
 alias glg='git log --oneline'
 alias glgg='git log --graph'
-# END GIT SECTION
+# END GIT
+
+# START NAVIGATION
+alias ls='ls --color=auto'
+alias ll='ls -l'
+alias la='ls -la'
+alias c='clear'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias home='cd ~'
+alias desktop='cd ~/Desktop'
+alias documents='cd ~/Documents'
+alias downloads='cd ~/Downloads'
+alias projects='cd ~/Projects'
+# END NAVIGATION
+
+# START DOCKER
+alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"'
+alias dimages='docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}"'
+alias dclean='docker system prune -a'
+alias drmi='docker rmi'
+alias drun='docker run -it'
+alias dstop='docker stop'
+alias drm='docker rm'
+# END DOCKER
+
+# START MISC
+alias s='sudo'
+alias serve='npx serve'
+alias weather='curl wttr.in'
+reload(){ cp ~/Projects/dev-environment/.bash_aliases ~/.bash_aliases && source ~/.bash_aliases; }
+# END MISC
