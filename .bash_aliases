@@ -26,21 +26,21 @@ parse_git_branch() {
 PS1="\[\$YELLOW\]- \W\[\$(branch_color)\]\$(parse_git_branch)\[\$YELLOW\] $ \[\$NORMAL\]"
 
 # START GIT
-gstash(){ git stash; }
-gstashp(){ git stash pop; }
-gstashd(){ git stash drop "$1"; }
-gstashl(){ git stash list; }
-greset(){ git reset --hard; }
-gchk(){ git checkout "$1"; }
-gstatus(){ git status; }
-gdiff(){ git diff --color=auto; }
-gpull(){ git pull; }
-gadd(){ git add -A; echo "all changes added to the staging area."; }
-gcommit(){ git commit -m "$1"; }
+alias gstash='git stash'
+alias gstashp='git stash pop'
+alias gstashc='git stash clear'
+alias gstashl='git stash list'
+alias greset='git reset --hard'
+alias gck='git checkout'
+alias gstatus='git status'
+alias gdiff='git diff --color=auto'
+alias gpull='git pull'
+alias gadd='git add -A'
+alias gcommit='git commit -m'
 gcommitp(){ git commit -m "$1"; git push; }
 gacp(){ git commit -am "$1"; git push; }
-gbranch(){ git branch; }
-gbranchn(){ git checkout -b "$1"; }
+alias gbranch='git branch'
+alias gbranchn='git checkout -b'
 alias glg='git log --oneline'
 alias glgg='git log --graph'
 # END GIT
@@ -72,6 +72,7 @@ alias drm='docker rm'
 # END DOCKER
 
 # START MISC
+alias aliases='less ~/.bash_aliases'
 alias s='sudo'
 alias serve='npx serve'
 alias weather='curl wttr.in'
