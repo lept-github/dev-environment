@@ -33,9 +33,10 @@ alias gstashl='git stash list'
 alias greset='git reset --hard'
 alias gck='git checkout'
 alias gstatus='git status'
+alias gs='git status'
 alias gdiff='git diff --color=auto'
 alias gpull='git pull'
-alias gadd='git add -A'
+alias ga='git add -A'
 alias gcommit='git commit -m'
 gcommitp(){ git commit -m "$1"; git push; }
 gacp(){ git commit -am "$1"; git push; }
@@ -46,6 +47,7 @@ alias glgg='git log --graph'
 # END GIT
 
 # START NAVIGATION
+alias p='pwd'
 alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -la'
@@ -73,8 +75,14 @@ alias drm='docker rm'
 
 # START MISC
 alias aliases='less ~/.bash_aliases'
+alias aliasesr='cp ~/Projects/dev-environment/.bash_aliases ~/.bash_aliases && source ~/.bash_aliases'
 alias s='sudo'
+alias install='sudo apt install'
 alias serve='npx serve'
 alias weather='curl wttr.in'
-reload(){ cp ~/Projects/dev-environment/.bash_aliases ~/.bash_aliases && source ~/.bash_aliases; }
 # END MISC
+
+# START FUN
+alias matrix='cmatrix'
+alias busy='hollywood'
+# END FUN
