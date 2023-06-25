@@ -1,4 +1,4 @@
-# START GIT
+# GIT
 alias gstash='git stash'
 alias gstashp='git stash pop'
 alias gstashc='git stash clear'
@@ -19,9 +19,8 @@ alias gbranch='git branch'
 alias gbranchn='git checkout -b'
 alias glg='git log --oneline'
 alias glgg='git log --graph'
-# END GIT
 
-# START NAVIGATION
+# NAVIGATION
 alias c='clear'
 alias p='pwd'
 alias ls='ls --color=auto'
@@ -36,9 +35,8 @@ alias desktop='cd ~/Desktop'
 alias documents='cd ~/Documents'
 alias downloads='cd ~/Downloads'
 alias projects='cd ~/Projects'
-# END NAVIGATION
 
-# START DOCKER
+# DOCKER
 # alias dps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Names}}\t{{.Status}}"'
 # alias dimages='docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}"'
 # alias dclean='docker system prune -a'
@@ -46,17 +44,14 @@ alias projects='cd ~/Projects'
 # alias drun='docker run -it'
 # alias dstop='docker stop'
 # alias drm='docker rm'
-# END DOCKER
 
-# START MISC
+# MISC
 alias s='sudo'
 alias source='source ~/.bashrc'
 alias install='sudo apt install'
 alias serve='npx serve'
-# END MISC
 
-# START FUN
+# FUN
 alias weather='curl wttr.in'
 alias matrix='cmatrix'
 alias busy='hollywood'
-# END FUN
