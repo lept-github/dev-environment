@@ -11,6 +11,7 @@ alias gdiff='git diff --color=auto'
 alias gpull='git pull'
 alias gpush='git push'
 alias ga='git add -A'
+alias gc='git commit -m'
 alias gcommit='git commit -m'
 gcommitp(){ git commit -m "$1"; git push; }
 gacp(){ git commit -am "$1"; git push; }
